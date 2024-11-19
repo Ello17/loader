@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    min-height: 100vh;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+#circle{
+    background-color: #323cf8;
+}
+.box-loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+@keyframes animate-1 {
+    0%{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #323cf8;
+        display: flex;
+    }
+    25%{
+        transform: translateY(-50px);
+    }
+    50%{
+        transform: translateX(50px);
+    }
+    60%{
+        display: none;
+    }
+    100%{
+
+    }
+}
+@keyframes animate-3 {
+    0%{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #323cf8;
+        display: flex;
+    }
+    25%{
+        transform: translateY(50px);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #323cf8;
+        display: flex;
+    }
+    50%{
+        transform: translateX(-50px);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #323cf8;
+        display: flex;
+    }
+    60%{
+    }
+    100%{
+        display: none;
+    }
+}
+@keyframes animate-background {
+    0% {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    25% {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    50%{
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+    }
+    75% {
+        border-radius: 100%;
+        width: 60px;
+        height: 60px;
+    }
+    /* 85% {
+        border-radius: 100%;
+        width: 60%;
+        height: 120%;
+    } */
+    /* 90% {
+        border-radius: 100%;
+        width: 80%;
+        height: 140%;
+    } */
+    100% {
+        width: 100%;
+        height: 180%;
+        border-radius: 100%;
+    }
+}
+.circle1{
+    width: 20px;
+    height: 20px;
+    animation: animate-1 1.5s ease-in-out alternate;
+    border-radius: 50%;
+    display: none;
+}
+.circle2{
+    width: 60px;
+    height: 60px;
+    animation: animate-background 2s ease-in-out alternate;
+    background-color: #323cf8;
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
+
+}
+.circle3{
+    width: 20px;
+    height: 20px;
+    animation: animate-3 2s ease-in-out alternate;
+    border-radius: 50%;
+    display: none;
+}
